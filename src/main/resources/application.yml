@@ -1,0 +1,24 @@
+server:
+  port: ${PORT:8761}
+
+spring:
+  application:
+    name: service-discovery
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    renewalPercentThreshold: 0.49
+#    enableSelfPreservation: false
+
+logging:
+  level:
+    com.netflix.eureka: DEBUG
+    com.netflix.discovery: DEBUG
+
